@@ -2,8 +2,7 @@ import { CategoriesList } from "../../components/CategoriesList";
 
 export const CategoryPage = () => {
     return (
-        <div>
-            CategoryPage
+        <div className="container">
             <CategoriesList />
         </div>
     );

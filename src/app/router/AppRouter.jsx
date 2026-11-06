@@ -6,30 +6,30 @@ import { Layout } from "../Layout";
 import { CategoryPage } from "../../pages/CategoryPage";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout />,
-        children: [
-            {
-                index: true,
-                element: <MainPage />,
-            },
-            {
-                path: "/cart",
-                element: <CartPage />,
-            },
-            {
-                path: "/product/:id",
-                element: <DetailsPage />,
-            },
-            {
-                path: "/category/:slug",
-                element: <CategoryPage />,
-            },
-        ],
-    },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <MainPage />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
+      },
+      {
+        path: "/products/:id",
+        element: <DetailsPage />,
+      },
+      {
+        path: "/category/:slug",
+        element: <CategoryPage />,
+      },
+    ],
+  },
 ]);
 
 export const AppRouter = () => {
-    return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 };
